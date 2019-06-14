@@ -1,0 +1,253 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.outer_div{
+	width:100%;
+	height: auto;
+}
+
+.menu{
+	width:100%;
+	background: black;
+	overflow: auto
+}
+
+.menu ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height:70px;
+}
+.menu li{
+	float: left;
+}
+
+.menu ul li a{
+	background: black;
+	text-decoration: none;
+	width:130px;
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	color:#f2f2f2;
+	font-family: sans-serif;
+	letter-spacing: 0.5px;
+}
+.menu li a:hover{
+	color:yellow;
+	opacity:1.5;
+	font-size: 19px;
+}
+.jumbotron {
+    background:url(uber.jpg);
+    border:2px solid black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f4511e;
+    color:whitesmoke;
+    padding: 100px 25px;
+    text-align: right; 
+  }
+
+.container-fluid {
+    padding: 60px 50px;
+  }
+
+  .logo {
+    font-size: 200px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+  }
+
+  .Ppl{
+    background: lightgreen;
+    height: auto;
+    overflow: auto;
+}
+.text{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top:20px;
+    
+}
+
+.slideshow-container {
+  background: lightgreen;
+  overflow: auto;
+  height: auto;
+  position: relative;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+  overflow: auto;
+  height: auto;
+  /*padding: 120px;*/
+}
+
+#image {
+	height: 140px;
+	width: 150px;
+	border-radius: 50%;
+
+}
+.left{
+	 margin: 0;
+     padding: 0;
+     float: left;
+	/*position: absolute;
+	transform: translateX(20%) translateY(-70%);*/
+
+}
+.right{
+     margin: 0;
+     padding: 0;
+     /*text-align: center;*/
+     float: left;
+     width: 500px;
+     line-height: 20px;
+     margin-top: 40px;
+     margin-left: 10px;
+     /*position: absolute;
+     transform: translateX(-15%) translateY(-80%);*/
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  width: auto;
+  padding: 0 25px;
+  color: black;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background:brown;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color:white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: black;
+}
+
+.row{
+  display:flex;
+}
+
+.column{
+  flex:50%;
+  height:400px;
+  padding:40px;
+}
+
+#map{
+  height:400px;
+  width : 40%;
+}
+.contact-form{
+  height : 400px;
+  margin-left: 50%;
+  max-width: 600px;
+	background: #f1f1f1;
+	position: absolute;
+	box-sizing: border-box;
+	border-radius: 8px;
+	text-align:center;
+  box-shadow: 0 0 20px #000000b3;
+
+}
+
+.contact-form h1{
+	margin-top: 0;
+	font-weight: 200;
+}
+
+.txtb{
+	border: 1px solid grey;
+	margin: 4px 0;
+	padding: 5px 5px;
+	border-radius: 2px;
+}
+
+.txtb label{
+	display:block;
+	text-align:left;
+	color: black;
+	text-transform: uppercase;
+	font-size:16px;
+}
+
+.txtb input,.txtb textarea{
+	width: 100%;
+	border: none;
+	background: none;
+	outline: none;
+	font-size: 17px;
+	margin-top: 6px;
+}
+
+.butn{
+	display: inline-block;
+	background: #9b59b6;
+	padding: 5px 0;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin-top: 4px;
+	font-size:20px;
+}
+
+.butn:hover{
+	color: yellow;
+}
+
+
+.sameline{
+  float : left;
+  width:50%;
+}

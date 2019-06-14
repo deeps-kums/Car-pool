@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home_Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="home_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="menu">
+		<ul>
+			<li><a href="#about">About</a></li>
+			<li><a href="#safety">Safety</a></li>
+			<li><a href="#feedback">Feedback</a></li>
+			<li><a href="#contact">Contact Us</a></li>
+	    </ul>
+
+	 </nav>
+
+     <div class="jumbotron">
+         <center><h1>Hack-a-Pool</h1> 
+            <p>No destination is far!</p> 
+            <form class="form-inline">
+              <div class="input-group">
+                <input type="destination" class="form-control" size="50" placeholder="Enter destination" required>
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-danger">Submit</button>
+                </div>
+              </div>
+            </form></center>
+          </div>
+
+    <!--Container -->
+    <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-8">
+                <h2>About </h2>
+                <h4>Mission :</h4>      
+                <p>Our mission is that no person should be deprived of basic amenities...</p><br>
+                <h4>Vision :</h4>
+                <p>Our vision is to connect the world and make it a better place to live in...</p><br>
+              </div>
+              <div class="col-sm-4">
+                <span class="glyphicon glyphicon-signal"></span>
+              </div>
+            </div>
+    </div>
+
+    <!--Feedback-->
+    <div class="Opinion">
+            <div class="Ppl">
+                <div class="text">What People Say</div>
+            </div>
+      <div class="slideshow-container">
+    
+      <!-- Full-width slides/quotes -->
+      <div class="mySlides" style="display: block;">
+          <div class="left">
+          <img src="gl.jpg" id="image">
+          </div>
+          <div class="right">
+          <p>Experience with Hack-a-pool was just awesome.</p>
+          </div>
+        
+      </div>
+    
+      <div class="mySlides" style="display: none;">
+          <div class="left">
+          <img src="user.jpg" id="image">
+          </div>
+        <div class="right">
+        <p>Life made easy with such an awesome app.</p>
+        </div>
+        
+      </div>
+    
+      <div class="mySlides" style="display: none;">
+          <div class="left">
+          <img src="bb.jpg" id="image">
+          </div>
+        <div class="right">
+        <p>Will highly recommend this app to everyone.</p>
+        </div>
+       
+      </div>
+    
+      <!-- Next/prev buttons -->
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    
+    <!-- Dots/bullets/indicators -->
+    <div class="dot-container">
+      <span class="dot active" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+    
+    </div>
+
+    <!--Safety Container-->
+    <div class="Safe">
+      <div class="row">
+          <div class="column">
+          <h1>Our Commitment to Safety</h1>
+          <p align="left">You deserve to be able to move safely.<br> 
+                          To look forward to the opportunities ahead.<br>
+                          To be connected to people and places that matter most.<br> 
+                          Which is why we’re focused on your safety, from setting<br>
+                           new standards to developing technology with the goal of reducing incidents.
+          </p>
+          </div>
+          <div class="column">
+          <img src="safety.jpg">
+         </div>
+      </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+<div style = "width: 100%;">
+    <div id="map" class="sameline">
+	 	
+    </div>
+ 
+    <div class="contact-form sameline">
+                      <h1>Contact Us</h1>
+                
+                      <div class="txtb">
+                      <label>Full Name </label>
+                      <input type="text" name="" value="" placeholder="Enter your name">
+                    </div>
+                
+                    <div class="txtb">
+                      <label>Phone No </label>
+                      <input type="text" name="" value="" placeholder="Enter your phone no.">
+                    </div>
+                
+                    <div class="txtb">
+                      <label>Address </label>
+                      <input type="text" name="" value="" placeholder="Enter your address">
+                    </div>
+                
+                    <div class="txtb">
+                      <label>Leave a Message </label>
+                      <textarea>   </textarea>>
+                    </div>
+                
+                    <a class="butn">Send</a>
+                      
+    </div>
+  </div>
+    <div>
+         <img src="map.jpg" class="img-responsive" style="width:100%; height: 500px; margin-top: 15px;">
+    </div>
+ 
+ <script type="text/javascript">
+   function initMap() {
+     // body...
+     // var location= {lat:-25.633 , lng:131.044};
+     var location = new google.maps.LatLng(12.9716, 77.5946);
+     var map=new google.maps.Map(document.getElementById("map"),{
+       zoom:6,
+       center:location
+     });
+   }
+ </script>
+ 
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl8x6fx5HuWT9-lJ7STI-Uh-r5ktSWgZw&callback=initMap"></script>
+ 
+ 
+
+
+
+    
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+</body>
+</html>

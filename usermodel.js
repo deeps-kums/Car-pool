@@ -1,0 +1,10 @@
+const mongoose =require('mongoose');
+const userSchema=mongoose.Schema({
+	_id:mongoose.Schema.Types.ObjectId,//default unique primary key with unique datatype
+	name:{type:String,required:true},
+	email:{type:String,required:true,unique:true},
+    password:{type:String,required:true},
+    phoneno:{type:String,required:true}
+});
+
+module.exports=mongoose.model('user',userSchema);

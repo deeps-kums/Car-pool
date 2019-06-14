@@ -1,0 +1,45 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="login_style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+	<div class="loginbox">
+		<img src="user.jpg" class="avatar">
+		<h1>  Login Here  </h1>
+		<form>
+			<p>E-Mail ID </p>
+			<input type="text" name="" id="email" placeholder="Enter E-mail ID">
+			<p>Password</p>
+			<input type="password" name="" id="password" placeholder="Enter  Password">
+			<input type="submit" name="btn" value="Login" onclick="login();"><br>
+			<a href="style.css"  target="blank" style="color: white;padding: 20px;">Forgot Password?</a><br>
+			<a href="style.css" target="blank" style="color: white;padding: 20px;">Don't have an account?</a>
+		</form>
+
+    </div>
+    <script>
+        function login(){
+            var email=parseInt(document.getElementById("email").value);
+            var password=document.getElementById("password").value;
+            axios.get('localhost:3000/user/'`${email}`)
+            .then(res=>{
+                if(res.data.email==email){
+                    location.replace(window.location.href.replace("/login","/home"));
+                }
+                else{
+                    location.replace(window.location.href.replace("/login","/register"));
+                }
+
+            }).catch(err=>{
+                alert("Wrong credentials");
+            })
+
+        }
+    </script>
+
+</body>
+</html>

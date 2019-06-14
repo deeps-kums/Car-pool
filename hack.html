@@ -1,0 +1,71 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Registration Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+            <div class="container">
+                    
+               <form class="form-horizontal" >
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="name">Name:</label>
+                        <div class="col-sm-10">
+                          <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">E-Mail ID:</label>
+                        <div class="col-sm-10">          
+                          <input type="email" class="form-control" id="email" placeholder="Enter e-mail ID" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label class="control-label col-sm-2" for="password">Password:</label>
+                            <div class="col-sm-10">          
+                              <input type="pwd" class="form-control" id="password" placeholder="Enter password" name="password">
+                            </div>
+                    </div>
+                    <div class="form-group">
+                                <label class="control-label col-sm-2" for="phoneno">Phone No:</label>
+                                <div class="col-sm-10">          
+                                  <input type="phoneno" class="form-control" id="phoneno" placeholder="Enter your phone no" name="phoneno">
+                                </div>
+                    </div>
+                      
+                      <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <input type="button" class="btn btn-default" onclick="loadDoc();" value="Submit">
+                        </div>
+                      </div>
+                    </form>
+            </div>
+                  
+
+        
+        <script>
+            //xhr
+            function loadDoc() {
+              console.log("entered");
+              var names= document.getElementById('name').value;
+              var email=document.getElementById('email').value;
+              var pwd= document.getElementById('password').value;
+              var phone= document.getElementById('phoneno').value;
+            let xhr=new XMLHttpRequest();
+            var json=JSON.stringify({
+              name:`${names}`,
+              email:`${email}`,
+              password:`${pwd}`,
+              phoneno:`${phone}`
+            });
+            xhr.open('POST','http://localhost:3000/user',true);
+            xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+            xhr.send(json);
+          }
+        </script>
+    </body>
+</html>

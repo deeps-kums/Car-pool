@@ -23,19 +23,17 @@
     </div>
     <script>
         function login(){
-            var email=parseInt(document.getElementById("email").value);
+            function login(){
+            var email=document.getElementById("email").value;
             var password=document.getElementById("password").value;
-            axios.get('localhost:3000/user/'`${email}`)
+            axios.get(`http://localhost:3000/user/${email}`)
             .then(res=>{
+                console.log(res.data);
                 if(res.data.email==email){
-                    location.replace(window.location.href.replace("/login","/home"));
-                }
-                else{
-                    location.replace(window.location.href.replace("/login","/register"));
-                }
-
-            }).catch(err=>{
-                alert("Wrong credentials");
+                window.open('home.html');}
+                })
+            .catch(err=>{
+                window.open('hack.html');
             })
 
         }
